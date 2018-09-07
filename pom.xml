@@ -88,19 +88,20 @@
             </plugin>
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>${maven-surefire-plugin.version}</version>
                 <configuration>
-                    <properties>
-                        <configurationParameters>
-                            junit.jupiter.execution.parallel.enabled=true
-                            junit.jupiter.execution.parallel.config.strategy=fixed
-                            junit.jupiter.execution.parallel.config.fixed.parallelism=4
-                        </configurationParameters>
-                    </properties>
+                    <!-- junit5 not support parallel tag.
+                    <parallel>classes</parallel>-->
+                    <!--<threadCount>4</threadCount>-->
+                    <!--<forkMode>perthread</forkMode>-->
+                    <!--<forkCount>4</forkCount>-->
+                    <!--<reuseForks>true</reuseForks>-->
+                    <!--<workingDirectory>FORK_${surefire.forkNumber}</workingDirectory>-->
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
+    <reporting>
+        <outputDirectory>report</outputDirectory>
+    </reporting>
 
 </project>
