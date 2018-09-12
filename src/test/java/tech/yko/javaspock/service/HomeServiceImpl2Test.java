@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.parallel.ExecutionMode.CONCURRENT;
 
 @Execution(CONCURRENT)
-public class HomeServiceImplTest {
+public class HomeServiceImpl2Test {
 
     private HomeServiceImpl homeService = new HomeServiceImpl();
 
